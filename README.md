@@ -68,4 +68,3 @@ npm start
 # TODO
 
 add .env to gitignore and replace the variables in .env with the real ones
-Ethan edited here
