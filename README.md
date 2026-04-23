@@ -188,3 +188,60 @@ Examples:
 - Grains
 
 ---
+# Entity Relationships
+
+Major system relationships include:
+
+- A user has many grocery items.
+- A user has many saved recipes.
+- A user has many notifications.
+- A user has one preference profile.
+- Meal plans belong to users.
+- Grocery items connect to ingredient types.
+- Meal plans contain scheduled recipes.
+- Modes may contain multiple meal plans.
+
+---
+
+# Non-Functional Requirements
+
+- Inventory should load within 10 seconds.
+- User authentication should complete within 5 seconds.
+- UI should support accessibility standards.
+- Screen-reader compatibility should be supported.
+- Colorblind accessibility mode should be available.
+- Background actions should provide visual feedback.
+- Input validation and sanitization should be enforced.
+
+---
+
+# Future Expansion Opportunities
+
+Potential future improvements include:
+
+- AI-powered shopping optimization.
+- Nutritional scoring and health insights.
+- Recipe recommendation personalization.
+- Expanded analytics dashboard.
+- Smart kitchen integrations.
+- Push notifications across devices.
+- Cloud synchronization enhancements.
+- Mobile-first UI deployment.
+
+---
+
+# Technology Concepts
+
+ShelfLife combines multiple software engineering concepts:
+
+- Object-oriented design
+- Database normalization
+- API integration
+- Authentication systems
+- CRUD operations
+- Recommendation systems
+- Notification scheduling
+- Community content management
+- Offline caching
+
+---
