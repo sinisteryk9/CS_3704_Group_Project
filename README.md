@@ -55,3 +55,136 @@ ShelfLife is an intelligent kitchen assistant designed to minimize food waste an
 | **UC2** | History & Stats | View graphs of food consumption and waste patterns. |
 
 ---
+# Algorithms Implemented
+
+ShelfLife includes algorithm-driven workflows that power core system functionality.
+
+## Community & Modes
+- `uploadMode()` – Uploads or updates community-created modes.
+- `downloadMode()` – Retrieves downloadable mode data.
+- `fetchModes()` – Loads publicly available modes.
+
+## Store Discovery
+- `findNearbyStores()` – Finds stores carrying missing ingredients.
+
+## Community Interaction
+- `postForumIssue()` – Creates a new forum post.
+- `replyToPost()` – Allows threaded replies to discussions.
+
+## Notifications
+- `manageReminder()` – Creates, snoozes, cancels, and schedules reminders.
+
+## Nutrition & Personalization
+- `setDailyCalorieGoal()` – Calculates and validates calorie goals.
+- `manageAccountPreferences()` – Handles allergens, password resets, and 2FA.
+
+## Inventory & Labels
+- `addGroceryItem()` – Adds grocery items with validation.
+- `manageFoodLabel()` – Creates, attaches, or removes labels.
+- `scanBarcode()` – Uses barcode APIs to autofill grocery entries.
+
+## Recipes & Meal Planning
+- `generateRecipeMatches()` – Matches recipes to inventory.
+- `saveRecipe()` – Saves recipes to a personal cookbook.
+- `addRecipeToMealPlan()` – Adds recipes to meal schedules.
+- `searchCookbook()` – Searches recipes by ingredients or title.
+- `editRecipe()` – Updates user cookbook entries.
+- `getMissingIngredients()` – Finds unavailable ingredients for recipes.
+
+## Authentication
+- `login()` – Validates credentials and starts a session.
+- `logout()` – Terminates sessions.
+- `createAccount()` – Registers new users securely.
+
+---
+
+# Database Schema
+
+ShelfLife uses a relational database structure to organize persistent application data.
+
+## Core Tables
+
+### Users
+Stores authentication and account details.
+
+Fields:
+- user_id
+- full_name
+- username
+- email
+- password_hash
+
+### User Preferences
+Stores dietary preferences and restrictions.
+
+Fields:
+- preference_id
+- user_id
+- diet_type
+- allergy_notes
+- budget_limit
+
+### Grocery Items
+Tracks user inventory.
+
+Fields:
+- grocery_item_id
+- user_id
+- ingredient_type_id
+- item_name
+- quantity
+- calorie_amount
+- grocery_cost
+- expiration_date
+
+### Recipes
+Stores recipe information.
+
+Fields:
+- recipe_id
+- title
+- source_name
+- instructions
+- estimated_cost
+
+### Saved Recipes
+Links users to stored recipes.
+
+Fields:
+- saved_recipe_id
+- user_id
+- recipe_id
+- saved_at
+
+### Meal Plans
+Stores planned meals over time.
+
+Fields:
+- meal_plan_id
+- user_id
+- plan_name
+- start_date
+- end_date
+
+### Notifications
+Stores reminder and alert information.
+
+Fields:
+- notification_id
+- user_id
+- message_text
+- notification_type
+- created_at
+- is_read
+
+### Ingredient Types
+Defines supported ingredient categories.
+
+Examples:
+- Vegetables
+- Fruits
+- Dairy
+- Protein
+- Grains
+
+---
